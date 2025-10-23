@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas Lozano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .project-card {
+            margin-bottom: 20px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="font-sans antialiased text-gray-800"> 
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Left: logo + name -->
+                <a href="#home" class="flex items-center space-x-2">
+                    <img src="assets/logo-purple.jpg" alt="Nicolas Lozano Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold" style="color:#5f47c6;">Nicolas Lozano</span>
+                </a>
+
+                <!-- Center/Right: desktop links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600 transition">Home</a>
+                    <a href="#work" class="text-gray-700 hover:text-indigo-600 transition">Work</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600 transition">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-indigo-600 transition">Skills</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600 transition">Contact</a>
+                </div>
+
+                <!-- Right: mobile button -->
+                <button id="menu-button" class="md:hidden text-gray-700 focus:outline-none" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="mobile-menu">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="#work" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Work</a>
+            <a href="#about" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#skills" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Skills</a>
+            <a href="#contact" class="block px-4 py-3 text-gray-700 hover:bg-gray-100">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-16" id="vanta-globe">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4" data-aos="fade-up">Hi, I'm Nicolas Lozano
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold text-indigo-200 mb-8" data-aos="fade-up"
+                    data-aos-delay="100">ML Developer/Researcher with experience in QA</h2>
+                <p class="text-lg text-indigo-100 max-w-2xl mx-auto md:mx-0 mb-8" data-aos="fade-up"
+                    data-aos-delay="200"> I build and test ML-powered solutions while researching how to push AI to its
+                    fullest potential </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start" data-aos="fade-up"
+                    data-aos-delay="300"> <a href="#work"
+                        class="px-8 py-3 bg-white text-indigo-600 font-medium rounded-full hover:bg-gray-100 transition">View
+                        My Work</a> <a href="#contact"
+                        class="px-8 py-3 border-2 border-white text-white font-medium rounded-full hover:bg-white hover:bg-opacity-10 transition">Contact
+                        Me</a> </div>
+            </div>
+        </div>
+    </section> 
+    <!-- Projects Section -->
+    <section id="work" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4" data-aos="fade-up">Selected Projects</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100"> Here are
+                    some of my recent works that showcase my design and development skills. </p>
+            </div>
+            <!-- Project 1 -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300"
+                data-aos="fade-up">
+                <img src="assets/colgate-chatbot.png" alt="Colgate Chatbot" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Mock Colgate Chatbot (Ongoing)</h3>
+                    <p class="text-gray-600 mb-4">
+                        An end‑to‑end RAG system that delivers fast, grounded answers tailored to Colgate’s brand and
+                        content. It scrapes the company's official pages, social media content, and product listings in
+                        Colombia. Data is cleaned, chunked, and embedded to support a chatbot via Streamlit (with
+                        planned WhatsApp integration). After analyzing model cost and usage efficiency, the system was
+                        optimized for Gemini, balancing performance with scalability. It includes scraping pipelines
+                        (Selenium/BeautifulSoup), custom prompt templates with safety guardrails.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">LangChain</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">BeautifulSoup</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Selenium</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">GeminiAPI</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300"
+                data-aos="fade-up">
+                <img src="assets/child censorinator cover.png" alt="Child Face Censoring"
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Child Face Censoring System</h3>
+                    <p class="text-gray-600 mb-4">
+                        A privacy-focused vision pipeline using YOLOv8 and OpenCV to detect and blur children’s faces in
+                        photos, videos, and live feeds. Designed for ethical and legal compliance, it processes each
+                        frame before display or export. The project involved rigorous data labeling and iterative
+                        testing to ensure the model balanced privacy with usability (accurately protecting children’s
+                        identities without excessive false positives). Modular and lightweight, the system is optimized
+                        for low-resource environments and adaptable to other anonymization tasks.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">PyTorch</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">YOLOv8</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">OpenCV</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Roboflow</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300"
+                data-aos="fade-up">
+                <img src="assets/biogas-cover.png" alt="AI-Driven Biogas System for Coffee Waste Management Proposal"
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">AI-Driven Biogas System for Coffee Waste
+                        Management Proposal</h3>
+                    <p class="text-gray-600 mb-4">
+                        Contributed to a research project submitted to MinCiencias that proposed using artificial
+                        intelligence to operate biodigesters which transform coffee waste, a major source of water
+                        pollution, into clean biogas for rural communities. My work focused on researching multiagent
+                        systems to autonomously manage the biodigesters and on designing a chatbot that explains the
+                        system and provides real time guidance based on IoT data. I also helped develop the project’s
+                        long term sustainability strategy, emphasizing environmental impact, autonomy, and community
+                        engagement.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">IoT Sensors</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Multi-Agent Systems</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Sustainable Development</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Circular Bioenergy</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300"
+                data-aos="fade-up">
+                <img src="assets/skillr-homepage.png" alt="Skillr - A Sports Skill Sharing Social Media Platform"
+                    class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Skillr - A Sports Skill Sharing Social Media
+                        Platform</h3>
+                    <p class="text-gray-600 mb-4">
+                        A sleek prototype of a social media platform that empowers users to showcase and teach their
+                        sporting abilities through short video clips tagged by discipline and skill level. The platform
+                        supports media uploads, tag-based discovery, and real-time feed updates with features like
+                        comments and likes, simulating the dynamic experience of leading social platforms. I led
+                        front-end development and UI logic, ensuring smooth clip rendering, consistent tagging, and
+                        responsive design across devices. The platform was enhanced with semantic HTML and basic SEO for
+                        realistic deployment performance.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">HTML5/CSS3</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">JavaScript</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">Firestore</span>
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm">SEO Techniques</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-right"> <img src="http://static.photos/people/640x360/4"
+                        alt="Nicolas Lozano" class="rounded-xl shadow-lg w-full"> </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Me</h2>
+                    <p class="text-gray-600 mb-4">
+                        My passion lies in developing and researching machine learning solutions, especially within the
+                        emerging AI landscape of South America. In this space, you may find some of my projects relating
+                        to Machine Learning, Computer Vision with Deep Learning, and applications that rely on Sequence
+                        Neural Networks. I build innovative ML applications while applying the rigor of my QA background
+                        to make them dependable in real‑world settings.
+                    </p>
+                    <p class="text-gray-600 mb-6"></p>
+                    Looking ahead, I plan to deepen my understanding of AI responsibility and governance to connect my
+                    technical expertise with ethically-driven frameworks to shape how AI is developed and deployed.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mb-6 mt-6">
+                        <div class="flex items-center">
+                            <i data-feather="award" class="text-indigo-600 mr-2"></i>
+                            <span class="text-gray-700">3+ Years Experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="briefcase" class="text-indigo-600 mr-2"></i>
+                            <span class="text-gray-700">4+ Projects</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="globe" class="text-indigo-600 mr-2"></i>
+                            <span class="text-gray-700">Global Clients</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="heart" class="text-indigo-600 mr-2"></i>
+                            <span class="text-gray-700">User-Centered</span>
+                        </div>
+                    </div>
+                    <a href="assets/Nicolas-Lozano-Resume.pdf" download="Nicolas-Lozano-Resume.pdf"
+                        class="inline-flex items-center px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
+                        Download Resume
+                        <i data-feather="download" class="ml-2 w-4 h-4"></i> </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-indigo-700 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4" data-aos="fade-up">Get In Touch</h2>
+                <p class="text-lg max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">Have a project in mind or want to collaborate? I'd love to hear from you!</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-1 items-center">
+                <!-- Contact Info -->
+                <div class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 bg-indigo-700 p-3 rounded-lg">
+                            <i data-feather="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold">Email</h3>
+                            <p class="text-indigo-100">nicolozano97@hotmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 bg-indigo-700 p-3 rounded-lg">
+                            <i data-feather="message-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold">WhatsApp</h3>
+                            <p class="text-indigo-100">
+                                <a href="https://wa.me/15195043655" target="_blank" class="hover:underline">
+                                    +1 (519) 504-3655</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="flex-shrink-0 bg-indigo-700 p-3 rounded-lg">
+                            <i data-feather="map-pin" class="w-6 h-6"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-semibold">Location</h3>
+                            <p class="text-indigo-100">Cali, Colombia</p>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6">
+                        <a href="https://www.linkedin.com/in/nicolozano97/" class="ml-14 w-10 h-10 flex items-center justify-center bg-white text-indigo-700 rounded-full hover:bg-indigo-600 hover:text-white transition">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Xlox88" class="ml-14 w-10 h-10 flex items-center justify-center bg-white text-indigo-700 rounded-full hover:bg-indigo-600 hover:text-white transition">
+                            <i data-feather="github"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Contact Form -->
+                <form id="contact-form" action="https://formspree.io/f/manpgdal" method="POST" class="bg-white p-8 rounded-xl shadow-md" data-aos="fade-up" data-aos-delay="300">
+                    <label class="block mb-4">
+                        <span class="text-gray-700">Your email:</span>
+                        <input type="email" name="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required>
+                    </label>
+                    <label class="block mb-4">
+                        <span class="text-gray-700">Your message:</span>
+                        <textarea name="message" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500" required></textarea>
+                    </label>
+                    <button type="submit" class="px-4 py-2 bg-indigo-600 text-white font-medium rounded-md hover:bg-indigo-700 transition">Send</button>
+                    <p id="thank-you" class="hidden text-green-600 mt-4">Thank you! Your message has been sent.</p>
+                </form>
+            </div>
+        </div>
+    </section> 
+    <!-- Footer -->
+    <footer class="py-8 bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0"> <span class="text-xl font-bold text-white">NICOLAS LOZANO</span>
+                    <p class="text-sm mt-1">© 2025 All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6"> <a href="#home" class="hover:text-white transition">Home</a> <a
+                        href="#work" class="hover:text-white transition">Work</a> <a href="#about"
+                        class="hover:text-white transition">About</a> <a href="#contact"
+                        class="hover:text-white transition">Contact</a> </div>
+            </div>
+        </div>
+    </footer>
+    <script> AOS.init({ duration: 800, easing: 'ease-in-out', once: true }); feather.replace(); // Initialize Vanta.js VANTA.GLOBE({ el: "#vanta-globe", mouseControls: true, touchControls: true, gyroControls: false, minHeight: 200.00, minWidth: 200.00, scale: 1.00, scaleMobile: 1.00, color: 0x7b6cfb, backgroundColor: 0x4f46e5, size: 0.8 }); // Animate skill bars on scroll document.addEventListener('DOMContentLoaded', function() { const skillBars = document.querySelectorAll('.skill-bar'); const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const width = entry.target.style.width; entry.target.style.width = '0'; setTimeout(() => { entry.target.style.width = width; }, 100); } }); }, {threshold: 0.5}); skillBars.forEach(bar => { observer.observe(bar); }); }); </script>
+</body>
+
+</html>
